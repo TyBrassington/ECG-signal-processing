@@ -24,4 +24,11 @@ public class PanTompkins {
         }
         return output;
     }
+
+    public static double[] bandPassFilter(double[] signal){
+        double[] temp = lowPassFilter(signal);
+        return highPassFilter(temp);
+    }
+
+
 }
