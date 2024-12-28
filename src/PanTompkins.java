@@ -30,4 +30,13 @@ public class PanTompkins {
         return highPassFilter(temp);
     }
 
+
+    public static double[] differentiation(double[] signal){
+        int n = signal.length;
+        double[] output = new double[n];
+        for (int i = 4; i < n; i++) { //dont allow negative index
+            output[i] = (2 * signal[i] + signal[i-1] - signal[i-3]- 2 * signal[i-4]) / 8;
+        }
+        return output;
+    }
 }
