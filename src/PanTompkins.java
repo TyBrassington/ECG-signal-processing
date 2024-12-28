@@ -39,4 +39,15 @@ public class PanTompkins {
         }
         return output;
     }
+
+    public static double[] square(double[] signal){
+        int n = signal.length;
+        double[] output = new double[n];
+        for (int i = 0; i < n; i++) {
+            output[i] = signal[i] * signal[i];
+        }
+        return output;
+    }
+
+
 }
